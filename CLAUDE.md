@@ -9,7 +9,7 @@ dans la diapo « Qui suis-je » des formations.
 - État : **publié** le 02/11/2026 → https://ludo1104-rp.github.io/profil-ludo/
   (dépôt public `ludo1104-rp/profil-ludo`, GitHub Pages sur `main`).
 - Auteur git local : ludo1104-rp (noreply), jamais le nom complet.
-- 02/11/2026 (local, non publié) : l'écran remplit toute la hauteur
+- 02/11/2026 (publié) : l'écran remplit toute la hauteur
   (format téléphone), hauteur stable d'une page à l'autre, portrait centré.
   Testé par Playwright : téléphone 390×844, iPad 1180×820, Mac 1440×900.
 - Fin du jeu : boutons « Son site » (rprof1.com) et « Instagram »
@@ -18,4 +18,4 @@ dans la diapo « Qui suis-je » des formations.
 - Pièges : ne pas remettre `height:100%` sur `html` (coupe le dégradé
   Licorne). `.monitor` et `.crt` sont en flex colonne ; l'écran éteint et la
   séquence de connexion prennent `flex:1` pour rester centrés.
-- Prochaine étape : Ludo dit « publie » → `git push` (GitHub Pages).
+- Prochaine étape : rien ; à retoucher si Ludo veut changer des questions.
