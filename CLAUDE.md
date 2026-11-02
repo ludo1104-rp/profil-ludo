@@ -12,6 +12,10 @@ dans la diapo « Qui suis-je » des formations.
 - 02/11/2026 (local, non publié) : l'écran remplit toute la hauteur
   (format téléphone), hauteur stable d'une page à l'autre, portrait centré.
   Testé par Playwright : téléphone 390×844, iPad 1180×820, Mac 1440×900.
-- Piège : `.monitor` et `.crt` sont en flex colonne ; l'écran éteint et la
+- Fin du jeu : boutons « Son site » (rprof1.com) et « Instagram »
+  (@ludo_rprof1), classe `.lnk`, habillés pour les 3 styles. Licence
+  lisible sur fonds clairs (`.licence`) ; fond Licorne sans coupure.
+- Pièges : ne pas remettre `height:100%` sur `html` (coupe le dégradé
+  Licorne). `.monitor` et `.crt` sont en flex colonne ; l'écran éteint et la
   séquence de connexion prennent `flex:1` pour rester centrés.
 - Prochaine étape : Ludo dit « publie » → `git push` (GitHub Pages).

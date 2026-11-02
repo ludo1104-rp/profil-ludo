@@ -21,7 +21,6 @@
 
   *{box-sizing:border-box}
 
-  html{height:100%}
 
   body{
     margin:0;
@@ -298,6 +297,26 @@
     padding:9px 14px;
   }
   @media (hover:hover){ .replay:hover{background:rgba(51,255,102,.1)} }
+
+  .licence{text-align:center; font:12px sans-serif; color:#9de8b0; opacity:.6; margin:14px 0 0; max-width:none}
+  body.t-unicorn .licence{color:#7A4FA0; opacity:.85; font-size:12px}
+  body.t-minimal .licence{color:#555; opacity:1; font-size:12px}
+
+  /* ---------- liens vers le site et Instagram ---------- */
+  .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+  .lnk{
+    display:inline-flex; align-items:center; gap:10px;
+    flex:1 1 200px;
+    font-family:var(--term); font-size:20px;
+    padding:10px 14px;
+    color:var(--amber);
+    border:1px solid var(--amber-dim);
+    text-decoration:none;
+  }
+  .lnk svg{width:22px; height:22px; flex:none}
+  .lnk small{display:block; font-size:16px; color:var(--amber); opacity:.7}
+  .lnk:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
+  @media (hover:hover){ .lnk:hover{background:rgba(255,176,0,.14)} }
 
   /* ---------- séquences animées ---------- */
   .boot{
@@ -580,13 +599,16 @@
   body.t-unicorn .progress{color:#C9A6E0}
   body.t-unicorn .progress b{color:#FF3FA4}
   body.t-unicorn .opt, body.t-unicorn .next,
-  body.t-unicorn .replay, body.t-unicorn .themeswitch{
+  body.t-unicorn .replay, body.t-unicorn .themeswitch, body.t-unicorn .lnk{
     font-family:'Fredoka',sans-serif; font-size:18px;
     background:#fff; color:#5B2D82;
     border:3px solid #FF6FC8; border-radius:22px;
     box-shadow:0 4px 0 #FFC2E6;
   }
   body.t-unicorn .opt .key{color:#FF3FA4}
+  body.t-unicorn .lnk{color:#FF3FA4; font-weight:600}
+  body.t-unicorn .lnk small{color:#9B7BB8; font-weight:400}
+  @media (hover:hover){ body.t-unicorn .lnk:hover{background:#FFF3FB} }
   @media (hover:hover){
     body.t-unicorn .opt:hover:not(:disabled){background:#FFF3FB}
   }
@@ -642,12 +664,15 @@
   body.t-minimal .progress{color:#C4C4C2; font-size:16px}
   body.t-minimal .progress b{color:#111}
   body.t-minimal .opt, body.t-minimal .next,
-  body.t-minimal .replay, body.t-minimal .themeswitch{
+  body.t-minimal .replay, body.t-minimal .themeswitch, body.t-minimal .lnk{
     font-family:inherit; font-size:17px;
     background:#fff; color:#1B1B1B;
     border:1px solid #C9C9C7; border-radius:6px; box-shadow:none;
   }
   body.t-minimal .opt .key{color:#767674}
+  body.t-minimal .lnk{font-weight:600}
+  body.t-minimal .lnk small{color:#767674; font-weight:400}
+  @media (hover:hover){ body.t-minimal .lnk:hover{background:#F3F3F1} }
   @media (hover:hover){
     body.t-minimal .opt:hover:not(:disabled){background:#F3F3F1}
   }
@@ -1268,12 +1293,23 @@ function final(){
       <p>Les deux se sont invitées dans ce petit jeu.</p>
     </div>
 
+    <div class="links">
+      <a class="lnk" href="https://rprof1.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <span>Son site<small>rprof1.com</small></span>
+      </a>
+      <a class="lnk" href="https://www.instagram.com/ludo_rprof1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <span>Instagram<small>@ludo_rprof1</small></span>
+      </a>
+    </div>
+
     <button class="replay" id="again">Relancer avec d'autres questions</button>`;
   document.getElementById('again').onclick=intro;
 }
 
 power();
 </script>
-<p style="text-align:center;font:12px sans-serif;color:#9de8b0;opacity:.6;margin:14px 0 0;max-width:none">CC BY-NC-SA 4.0 · © 2026 Ludo (@rprof_1) · rprof1.com</p>
+<p class="licence">CC BY-NC-SA 4.0 · © 2026 Ludo (@rprof_1) · rprof1.com</p>
 </body>
 </html>
