@@ -1,6 +1,6 @@
 # profil-ludo
 
-Jeu « PROFIL.EXE » : 5 questions tirées sur 13 pour découvrir Ludo, montré
+Jeu « PROFIL.EXE » : 5 questions tirées sur 12 pour découvrir Ludo, montré
 dans la diapo « Qui suis-je » des formations.
 
 - Source : artefact claude.ai « profil-ludo.html » (copié de Téléchargements le 02/11/2026).
@@ -9,4 +9,9 @@ dans la diapo « Qui suis-je » des formations.
 - État : **publié** le 02/11/2026 → https://ludo1104-rp.github.io/profil-ludo/
   (dépôt public `ludo1104-rp/profil-ludo`, GitHub Pages sur `main`).
 - Auteur git local : ludo1104-rp (noreply), jamais le nom complet.
-- Prochaine étape : rien ; à retoucher si Ludo veut changer des questions.
+- 02/11/2026 (local, non publié) : l'écran remplit toute la hauteur
+  (format téléphone), hauteur stable d'une page à l'autre, portrait centré.
+  Testé par Playwright : téléphone 390×844, iPad 1180×820, Mac 1440×900.
+- Piège : `.monitor` et `.crt` sont en flex colonne ; l'écran éteint et la
+  séquence de connexion prennent `flex:1` pour rester centrés.
+- Prochaine étape : Ludo dit « publie » → `git push` (GitHub Pages).
